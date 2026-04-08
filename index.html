@@ -39,12 +39,12 @@
 
 		.grid{
 			display: grid;
-			grid-template-columns: lfr lfr;
+			grid-template-columns: 1fr 1fr;
 			gap: 1.8rem;
 		}
 
 		@media (max-width: 700px) {
- 			.grid { grid-template-columns: 1fr; }
+ 			.grid { grid-template-columns: 1fr ;
 		}
 
 		.card {
@@ -62,10 +62,6 @@
 
 </head>
 
-<div class="grid">
-	<div class="card"> id="left-panel"</div>
-	<div class="card"> id="right-panel"</div>
-</div>
 
 <body>
 
@@ -74,6 +70,30 @@
 			<h1>Quick Notes Dashboard</h1>
 			<p>Practice <strong>DOM manipulation</strong> + <strong>BOM</strong>.</p>
 			<div class="badge"> Lab: BOM+DOM | PURE JS </div>
+		</header>
+
+		<div class="grid">
+		<div class="card" id="left-panel">
+			<h2>✏ Add a note</h2>
+			<div class="form-group">
+ 				<label>📌📌 Title *</label>
+ 				<input type="text" id="noteTitle" placeholder="e.g., DOM practice">
+ 			</div>
+
+ 		<div class="form-group">
+ 			<label>📝📝 Content</label>
+ 			<textarea id="noteContent" rows="2"
+ 			placeholder="Write something..."></textarea>
+ 		</div>
+
+ 		<button id="addNoteBtn">+ Add Note</button>
+ 		<div class="counter" id="noteCounter">0 notes</div>
+		
+
+		</div>
+		<div class="card" id="right-panel">RIGHT</div>
+		</div>
+
 	</div>
 
 	<script>
